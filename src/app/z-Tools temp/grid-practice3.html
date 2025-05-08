@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+</head>
+<style>
+    body{
+        font-family:Helvetica,Arial, sans-serif;
+        
+    }
+    .grid{
+       display: grid;
+       grid-template-columns: auto auto auto auto;
+       background: #ccc;
+       grid-gap: 10px;
+       padding: 10px;
+    }
+    
+    .grid div{
+        background: orange;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+    }
+    .area1{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        /* grid-column: 1/5; */
+        /* grid-column: span 4; */
+    }
+    .area2{
+        grid-row-start: 2;
+        grid-row-end: 7;
+        /* grid-row: 2/7; */
+    }
+    
+</style>
+<body>
+    <div class="grid">
+        <div class="area1">Bereich 1</div>
+        <div class="area2">Bereich 2</div>
+        <div class="area3">Bereich 3</div>
+        <div class="area4">Bereich 4</div>
+        <div class="area5">Bereich 5</div>
+        <div class="area6">Bereich 6</div>
+        <div class="area7">Bereich 7</div>
+        <div class="area8">Bereich 8</div>
+        <div class="area9">Bereich 9</div>
+        <div class="area10">Bereich 10</div>
+        <div class="area11">Bereich 11</div>
+        <div class="area12">Bereich 12</div>
+        <div class="area13">Bereich 13</div>
+        <div class="area14">Bereich 14</div>
+        <div class="area15">Bereich 15</div>
+        <div class="area16">Bereich 16</div>
+    </div>
+</body>
+</html>

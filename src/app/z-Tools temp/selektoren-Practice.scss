@@ -1,0 +1,76 @@
+body{
+    font-family:helvetica,arial,sans-serif;
+}
+/*Selektor mit dem man einen bestimmten Wert in einer Klasse anspricht. Hier wird nach dem Wert "kraut" gesucht und dementsprechent formatiert.*/
+[class*="kraut"]{
+    background:pink;
+}
+
+/*Hier werden alle Klassen mit einem bestimmten Startwert formatiert, in diesem Fall "fuß". Der Wert "fuß" steht nur in zwei der vier Klassen am Anfang und nur diese werden deshalb formatiert.*/
+[class^="fuß"]{
+    background:pink;
+}
+
+/*Hier werden alle Klassen mit einem bestimmten Endwert formatiert, in diesem Fall "heit". Der Wert "heit" steht nur in zwei der vier Klassen am Ende und nur diese werden deshalb formatiert.*/
+[class$="heit"]{
+    background:pink;
+}
+
+/*Selektor mit dem man einen bestimmten Wert in einer Klasse anspricht, der einen Bindestrich hat. In diesem Fall wird das Wort home nur formatiert, wenn es einen Bindestrich hat.*/
+[class|="home"]{
+    background:pink;
+}
+/*Formatierung der input Tags. Das hat nichts mit den Attribut Selektoren zu tun. Es ist eine rein optische Formatierung.*/
+input{
+    display:block;
+    padding:9px;
+    margin:12px 0;
+    width:210px;   
+}
+/*Hier kann man bestimmte "input types" formatieren. In diesem Fall werden die type text und submit formatiert.*/
+input[type="text"]{
+    background:black;
+    color:white;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+}
+input[type="submit"]{
+    background:hotpink;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+}
+/*Hier werden alle Links mit einem target Attribut formatiert*/
+a[target]{
+    background:orange;
+    text-decoration:none;
+    color:white;
+}
+/*Hier werden alle Links mit einem bestimmten target Attribut formatiert. In diesem Fall alle Links mit new. Leider wird von der vorherigen formatierung mit target das orange auch auf den blank durchvererbt.*/
+a[target="new"]{
+    background:orange;
+    text-decoration:none;
+    color:white;
+}
+/*Hier werden alle Links mit einem bestimmten Wert im title Attribut formatiert. Hier werden die Elemente formatiert, die den Wert Albumcover haben*/
+[title~="Albumcover"]{
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    width:100px;
+}
+/*Selektor mit dem man ein Element mit dem language Tag de formatiert. Da wir in diesem Dokument im html Tag das attribut lang="de" haben, wird die komplette Seite grau.*/
+[lang|="de"]{
+    background:#ccc;
+}
+/*Hier werden alle Links mit einem bestimmten vorangehenden Elternelement ORANGE formatiert. In diesem Fall alle Klassen die mit dem Wert fuß beginnen, aber in einem DIV sind. Leider wird von der vorherigen Formatierung mit Startwert fuß das pink auch auf unsere p und div Tags durchvererbt. Geht genauso für den Endwert:
+div[class$="fuß"]{
+    background: orange !important;
+}
+*/
+div[class^="fuß"]{
+    background: orange !important;
+}
+/*Hier werden alle Elemente mit einer bestimmten Dateiendung formatiert. In diesem Fall alle Links zu einer PDF Datei.*/
+[href$=".pdf"]{
+    background: orange !important;
+}

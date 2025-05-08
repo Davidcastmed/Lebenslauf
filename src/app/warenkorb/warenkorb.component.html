@@ -1,0 +1,110 @@
+<section>
+  <h2>Zertifikate</h2>
+  <div class="certificate-grid">
+    <div class="certificate">
+      <img src="../assets/zertifikate/1.png" alt="Zertifikat 1">
+      <!-- <p><strong>Anerkennung</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/2.png" alt="Zertifikat 1">
+      <!-- <p><strong>Anerkennung</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/3.png" alt="Zertifikat 2">
+      <!-- <p><strong>Anerkennung</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/4.png" alt="Zertifikat 3">
+      <!-- <p><strong>Anerkennung</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/5.png" alt="Zertifikat 1">
+      <!-- <p><strong>Übersetzung</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/6.png" alt="Zertifikat 2">
+      <!-- <p><strong>Abschluss</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/7.png" alt="Zertifikat 2">
+      <!-- <p><strong>Abschluss</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/8.png" alt="Zertifikat 2">
+      <!-- <p><strong>Abschluss</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/9.png" alt="Zertifikat 2">
+      <!-- <p><strong>Abschluss</strong></p> -->
+    </div>
+    <div class="certificate">
+      <img src="../assets/zertifikate/10.png" alt="Zertifikat 2">
+      <!-- <p><strong>Abschluss</strong></p> -->
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="wrapper">
+  <h2>Dein Warenkorb({{ counter }})</h2>
+  <div class="pay-over-left-right">
+    <table class="rows-container">
+      <tr class="table-header">
+        <th class="art-name">ARTIKEL</th>
+        <th class="wk-amount">ANZHAL</th>
+        <th class="wk-sum">SUMME</th>
+        <th class="spac-for-btn"></th>
+      </tr>
+      <img
+        *ngIf="counter <= 0"
+        class="background-logo"
+        src="../../assets/phi-logo.png"
+      />
+      <tr *ngFor="let item of articlesFromLocalStorage" class="rows">
+        <td class="article-details">
+          <img [src]="item.pic1" />
+          <div class="details">
+            <p>{{ item.name }}</p>
+            <p>{{ item.codArt | uppercase }}</p>
+            <p>{{ item.shortDescription }}</p>
+          </div>
+        </td>
+        <td class="wk-amount">
+          <select #amount (change)="onSelectedAmount(amount.value, item.name)">
+            <option selected>{{ item.amount }}</option>
+            <option *ngFor="let items of [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+              {{ items }}
+            </option>
+          </select>
+        </td>
+        <td class="wk-total">{{ item.totalPrice | germanNumber }}€</td>
+        <td>
+          <button (click)="deleteArticle(item.name)" class="close-button">
+            &times;
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="cart-details-container">
+      <div class="items">
+        <label for="sum">Summe:</label>
+        <label for="shipping">Versand:</label>
+        <label>MwSt.(19%):</label>
+        <label for="total">Gesamtsumme</label>
+      </div>
+      <div class="values">
+        <label>{{ subTotal | germanNumber }}</label>
+        <label>00.00€</label>
+        <label>{{ taxes | germanNumber }}</label>
+        <label>{{ total | germanNumber }}</label>
+      </div>
+      <div class="options">
+        <button *ngIf="counter > 0" (click)="makeThePayment()">
+          ZUR KASSE
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<app-footer></app-footer>

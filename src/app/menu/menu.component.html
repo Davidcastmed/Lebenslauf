@@ -1,0 +1,33 @@
+<div class="menu-container" >
+  <ul class="menu-items">
+    <li
+      *ngFor="let item of menu"
+      class="item"
+      (click)="getSelectedMenu(item)"
+    >
+      {{ item}}
+    </li>
+  </ul>
+
+  <!-- SUBMENÚ desplegable -->
+  <!-- *ngIf="isVisible" -->
+  <!-- <ul 
+  *ngIf="menuActivated"
+    class="container"
+    [ngStyle]="submenuPosition"
+  > -->
+    <!-- <div   class="items-container"> -->
+      <!-- <div class="close" (click)="closeMenu()">✕</div> -->
+      <!-- <ul   class="menu-subitems">
+        <li *ngFor="let subItem of currentMenuElement" 
+        (click)="getSelectedMenu(subItem.name, subItem.category)" >
+          <a >{{subItem.name}}</a>  
+        </li>
+      </ul>
+    </div>
+  </ul> -->
+</div>
+
+<!-- Overlay -->
+<div class="overlay" *ngIf="overlay" (click)="closeMenu()"></div>
+

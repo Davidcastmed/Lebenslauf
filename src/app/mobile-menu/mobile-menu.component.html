@@ -1,0 +1,20 @@
+<ul class="vertical" [ngStyle]="{ transform: 'translate(' + value + 'px)' }">
+  <div (click)="closeMenu()" class="close">X</div>
+  <li *ngFor="let item of menu"
+    (click)="getSelectedMenu(item)"
+    (click)="closeMenu()"
+    (click)="closeMenu()"
+  >
+    {{item}}
+  </li>
+</ul>
+
+<div class="horizontal">
+  <img
+    (click)="openMenu()"
+    src="../../assets/icons/hamburger-menu.png"
+    alt=""
+  />
+</div>
+<!-- <app-search-displayed [searchResult]="searchResult"></app-search-displayed> -->
+<div (click)="closeMenu()" *ngIf="isVisible" class="overlay"></div>

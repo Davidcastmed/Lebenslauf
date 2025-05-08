@@ -1,0 +1,15 @@
+.hidden {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.app-content {
+  width: 100%;
+  background-color: #f9fcfd;
+  margin: 5.5rem 0rem 0rem 0rem;
+}
+@media only screen and (max-width: 665px) {
+  .app-content {
+    margin: 6.7rem 0rem 0rem 0rem;
+  }
+}
